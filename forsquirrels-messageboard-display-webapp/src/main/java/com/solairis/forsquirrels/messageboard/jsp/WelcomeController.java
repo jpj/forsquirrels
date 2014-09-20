@@ -16,6 +16,7 @@
 
 package com.solairis.forsquirrels.messageboard.jsp;
 
+import com.solairis.forsquirrels.messageboard.MessageThreadRepository;
 import com.solairis.forsquirrels.messageboard.MessageThreadRepositoryInMemory;
 import java.util.Date;
 import java.util.Map;
@@ -29,7 +30,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class WelcomeController {
 	
 	@Autowired
-	private MessageThreadRepositoryInMemory messageBoard;
+	private MessageThreadRepository messageBoard;
 
 	@Value("${application.message:Hello World}")
 	private String message = "Hello World";
