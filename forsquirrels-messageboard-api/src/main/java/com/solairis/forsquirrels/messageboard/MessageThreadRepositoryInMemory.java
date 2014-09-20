@@ -4,7 +4,7 @@ package com.solairis.forsquirrels.messageboard;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MessageThreadRepositoryInMemory {
+public class MessageThreadRepositoryInMemory implements MessageThreadRepository {
 	
 	private final List<MessageThread> threads;
 
@@ -12,6 +12,7 @@ public class MessageThreadRepositoryInMemory {
 		this.threads = new ArrayList<>();
 	}
 
+	@Override
 	public List<MessageThread> findAllThreads() {
 		return this.threads;
 	}
