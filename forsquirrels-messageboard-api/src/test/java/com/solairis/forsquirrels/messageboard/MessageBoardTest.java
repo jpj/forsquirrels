@@ -21,5 +21,11 @@ public class MessageBoardTest {
 		List<MessageThread> threads = this.target.findAllThreads();
 		assertThat(threads.isEmpty(), is(true));
 	}
+	
+	@Test
+	public void starting_a_message_thread_adds_one_thread() {
+		MessageThread thread = this.target.startThread();
+		assertThat(this.target.findAllThreads().size(), is(1));
+	}
 
 }
