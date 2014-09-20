@@ -48,7 +48,7 @@
 		</dependency>
 	 <dependency>
 	  <groupId>${project.groupId}</groupId>
-	  <artifactId>forsquirrels-api</artifactId>
+	  <artifactId>forsquirrels-messageboard-api</artifactId>
 	  <version>${project.version}</version>
 	 </dependency>
 	</dependencies>

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html
           PUBLIC "-//W3C//DTD XHTML 1.1//EN"
 	  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
@@ -157,50 +158,20 @@
       <a href="post.html">Post a new message</a>
 	</span>
     </p>
-
-
-    <div id="threadID_266" style="border: solid black 1px;margin-bottom:7px;">
-
-      <div class="c2">
-        &gt;
-        <a href="thread.html?id=266&amp;msg=3083#post_3083">Getting in Contact</a>
-        Posted by: <b>Majorlabelland</b> on:
-        <i>2014-02-26 19:31:35</i>
-      </div>
-      <div class="c1">
-        -&gt;
-        <a href="thread.html?id=266&amp;msg=3086#post_3086">Re: Getting in Contact</a>
-        Posted by: <b>guest</b> on:
-        <i>2014-09-15 15:09:37</i>
-      </div>
-    </div>
-    <div id="threadID_265" style="border: solid black 1px;margin-bottom:7px;">
-
-      <div class="c2">
-        &gt;
-        <a href="thread.html?id=265&amp;msg=3080#post_3080">I miss Bill</a>
-        Posted by: <b>M.G.</b> on:
-        <i>2013-11-30 06:45:19</i>
-      </div>
-      <div class="c1">
-        -&gt;
-        <a href="thread.html?id=265&amp;msg=3081#post_3081">Re: I miss Bill</a>
-        Posted by: <b>guest</b> on:
-        <i>2013-12-28 16:25:44</i>
-      </div>
-      <div class="c2">
-        -&gt;
-        <a href="thread.html?id=265&amp;msg=3084#post_3084">Re: Style Boy</a>
-        Posted by: <b>Mullaney</b> on:
-        <i>2014-03-15 16:38:00</i>
-      </div>
-      <div class="c1">
-        -&gt;
-        <a href="thread.html?id=265&amp;msg=3085#post_3085">Re: I miss Bill</a>
-        Posted by: <b>guest</b> on:
-        <i>2014-09-09 02:34:14</i>
-      </div>
-    </div>
+	  
+	  <c:forEach items="${messageThreads}" var="thread">
+		  <div id="threadID_266" style="border: solid black 1px;margin-bottom:7px;">
+			  <c:forEach items="${thread.posts}" var="post"  varStatus="postsStatus">
+				  <div class="${postsStatus.index % 2 == 0 ? 'c2' : 'c1'}">
+					  ${postsStatus.first ? '' : '-'}&gt;
+					  
+					  <a href="thread.html?id=266&amp;msg=3083#post_3083">${post.subject}</a>
+					  Posted by: <b>${post.author}</b> on:
+					  <i>${post.postDate}</i>
+				  </div>
+			  </c:forEach>
+		  </div>
+	  </c:forEach>
 	  
 	  
 	  
