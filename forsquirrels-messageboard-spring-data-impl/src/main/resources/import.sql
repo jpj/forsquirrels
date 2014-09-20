@@ -1,4 +1,4 @@
-insert into FS_MB_THREADS(`DATE`) values (NOW)
+insert into FS_MB_THREADS(DATE) values (NOW)
 
 /*
 --

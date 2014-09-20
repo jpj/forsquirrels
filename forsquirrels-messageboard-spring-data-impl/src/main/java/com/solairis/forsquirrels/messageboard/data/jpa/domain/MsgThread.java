@@ -7,9 +7,11 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 
-@Entity(name = "FS_MB_THREADS")
+@Entity
+@Table(name = "FS_MB_THREADS")
 public class MsgThread implements Serializable {
 	
 	@Id
@@ -17,7 +19,7 @@ public class MsgThread implements Serializable {
 	@Column(name = "ID")
 	private Long id;
 	
-	@Column(name = "`DATE`")
+	@Column(name = "DATE")
 	@Temporal(javax.persistence.TemporalType.DATE)
 	private Date creationDate;
 
