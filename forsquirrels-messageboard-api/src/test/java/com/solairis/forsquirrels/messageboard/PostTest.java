@@ -1,6 +1,7 @@
 
 package com.solairis.forsquirrels.messageboard;
 
+import java.util.Date;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 import org.junit.Before;
@@ -10,12 +11,13 @@ public class PostTest {
 	
 	private static final String AUTHOR = "Henry";
 	private static final String SUBJECT = "First Subject";
+	private static final Date POST_DATE = new Date();
 	
 	private Post target;
 	
 	@Before
 	public void before_each_test() {
-		this.target = new Post(SUBJECT, AUTHOR);
+		this.target = new Post(SUBJECT, AUTHOR, POST_DATE);
 	}
 
 	@Test
@@ -27,5 +29,11 @@ public class PostTest {
 	public void post_has_author() {
 		String author = this.target.author();
 		assertThat(author, is(AUTHOR));
+	}
+	
+	@Test
+	public void post_has_post_date() {
+		Date postDate = this.target.postDate();
+		assertThat(postDate, is(POST_DATE));
 	}
 }

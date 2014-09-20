@@ -10,8 +10,8 @@ class MessageBoard {
 	List<Post> findAllThreads() {
 		
 		return new ArrayList<Post>() {{
-			add(new Post(null, null));
-			add(new Post(null, null));
+			add(new Post(null, null, null));
+			add(new Post(null, null, null));
 		}};
 	}
 
