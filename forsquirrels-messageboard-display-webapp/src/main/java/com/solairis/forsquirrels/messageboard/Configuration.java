@@ -1,5 +1,5 @@
 
-package com.solairis.forsquirrels.messageboard.jsp;
+package com.solairis.forsquirrels.messageboard;
 
 import com.solairis.forsquirrels.messageboard.MessageThread;
 import com.solairis.forsquirrels.messageboard.MessageThreadRepository;
@@ -40,7 +40,7 @@ public class Configuration {
 //	}
 	
 	@Bean
-	public MessageThreadRepository messageBoard() {
+	public MessageThreadRepository messageThreadRepository() {
 		return new MessageThreadRepository() {
 
 			@Override

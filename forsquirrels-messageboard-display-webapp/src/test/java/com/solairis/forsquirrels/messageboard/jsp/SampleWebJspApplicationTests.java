@@ -16,6 +16,7 @@
 
 package com.solairis.forsquirrels.messageboard.jsp;
 
+import com.solairis.forsquirrels.messageboard.SampleWebJspApplication;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Value;

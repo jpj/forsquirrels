@@ -26,11 +26,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class WelcomeController {
 	
 	@Autowired
-	private MessageThreadRepository messageBoard;
+	private MessageThreadRepository messageThreadRepository;
 
 	@RequestMapping("/")
 	public String welcome(Map<String, Object> model) {
-		model.put("messageThreads", this.messageBoard.findAllThreads());
+		model.put("messageThreads", this.messageThreadRepository.findAllThreads());
 		return "welcome";
 	}
 
