@@ -23,9 +23,8 @@ public class ThreadTest {
 	
 	@Test
 	public void can_add_Post_to_Thread() {
-		assertThat(target.posts().isEmpty(), is(true)); // Remove
-		
-		// Add one then verify it is there
+		this.target.addPost(new Post(null, null, null));
+		assertThat(target.posts().size(), is(1));
 	}
 
 }

@@ -5,10 +5,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Thread {
+	
+	private final List<Post> posts;
+
+	public Thread() {
+		this.posts = new ArrayList<>();
+	}
 
 	List<Post> posts() {
-		return new ArrayList<Post>() {{
-		}};
+		return this.posts;
+	}
+
+	void addPost(Post post) {
+		this.posts.add(post);
 	}
 
 }
