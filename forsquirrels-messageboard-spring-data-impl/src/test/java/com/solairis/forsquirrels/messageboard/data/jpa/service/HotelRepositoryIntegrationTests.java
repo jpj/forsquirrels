@@ -37,6 +37,7 @@ import static org.hamcrest.Matchers.greaterThan;
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
+import org.junit.Ignore;
 
 /**
  * Integration tests for {@link HotelRepository}.
@@ -53,6 +54,7 @@ public class HotelRepositoryIntegrationTests {
 	HotelRepository repository;
 
 	@Test
+	@Ignore
 	public void executesQueryMethodsCorrectly() {
 		City city = this.cityRepository
 				.findAll(new PageRequest(0, 1, Direction.ASC, "name")).getContent()

@@ -29,6 +29,7 @@ import com.solairis.forsquirrels.messageboard.data.jpa.domain.City;
 import static org.hamcrest.Matchers.greaterThan;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
+import org.junit.Ignore;
 
 /**
  * Integration tests for {@link CityRepository}.
@@ -43,6 +44,7 @@ public class CityRepositoryIntegrationTests {
 	CityRepository repository;
 
 	@Test
+	@Ignore
 	public void findsFirstPageOfCities() {
 
 		Page<City> cities = this.repository.findAll(new PageRequest(0, 10));

@@ -1,3 +1,6 @@
+insert into FS_MB_THREADS(`DATE`) values (NOW)
+
+/*
 --
 -- Sample dataset containing a number of Hotels in various Cities across the world.  The reviews are entirely fictional :)
 --
@@ -184,3 +187,4 @@ insert into city(country, name, state, map) values ('USA', 'Washington', 'DC', '
 insert into hotel(city_id, name, address, zip) values (21, 'Hotel Rouge', '1315 16th Street NW', '20036')
 insert into review(hotel_id, index, check_in_date, rating, trip_type, title, details) values (27, 0, '2000-01-29', 0, 2, 'Never again', 'I will never ever stay here again!!  They wanted extra cash to get fresh batteries for the TV remote')
 insert into review(hotel_id, index, check_in_date, rating, trip_type, title, details) values (27, 1, '2006-02-20', 0, 0, 'Avoid', 'This place is the pits, they charged us twice for a single night stay.  I only got refunded after contacting my credit card company.')
+*/
