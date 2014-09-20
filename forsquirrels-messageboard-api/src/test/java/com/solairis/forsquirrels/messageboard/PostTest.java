@@ -1,9 +1,7 @@
 
 package com.solairis.forsquirrels.messageboard;
 
-import org.hamcrest.CoreMatchers;
 import static org.hamcrest.CoreMatchers.is;
-import org.junit.Assert;
 import static org.junit.Assert.assertThat;
 import org.junit.Before;
 import org.junit.Test;
