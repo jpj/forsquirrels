@@ -1,13 +1,12 @@
 
 package com.solairis.forsquirrels.messageboard;
 
-import com.solairis.forsquirrels.messageboard.Post;
 import java.util.ArrayList;
 import java.util.List;
 
-class MessageBoard {
+public class MessageBoard {
 
-	List<Post> findAllThreads() {
+	public List<Post> findAllThreads() {
 		
 		return new ArrayList<Post>() {{
 			add(new Post(null, null, null));
