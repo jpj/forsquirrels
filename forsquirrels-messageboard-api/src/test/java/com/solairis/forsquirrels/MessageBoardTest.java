@@ -2,9 +2,8 @@
 package com.solairis.forsquirrels;
 
 import java.util.List;
-import org.hamcrest.CoreMatchers;
-import org.hamcrest.MatcherAssert;
-import org.junit.Assert;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -20,7 +19,7 @@ public class MessageBoardTest {
 	@Test
 	public void show_list_of_posts() {
 		List<Post> posts = this.target.findAllPosts();
-		Assert.assertThat(posts.isEmpty(), CoreMatchers.is(false));
+		assertThat(posts.isEmpty(), is(false));
 	}
 
 }
