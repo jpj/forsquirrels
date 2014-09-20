@@ -8,7 +8,6 @@ public class Thread {
 
 	List<Post> posts() {
 		return new ArrayList<Post>() {{
-			add(new Post(null, null, null));
 		}};
 	}
 
