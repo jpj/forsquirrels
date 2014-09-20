@@ -1,7 +1,7 @@
 
 package com.solairis.forsquirrels.messageboard.jsp;
 
-import com.solairis.forsquirrels.messageboard.MessageBoard;
+import com.solairis.forsquirrels.messageboard.MessageThreadRepositoryInMemory;
 import com.solairis.forsquirrels.messageboard.Post;
 import java.util.Date;
 import org.springframework.context.annotation.Bean;
@@ -10,8 +10,8 @@ import org.springframework.context.annotation.Bean;
 public class Configuration {
 	
 	@Bean
-	public MessageBoard messageBoard() {
-		final MessageBoard messageBoard = new MessageBoard();
+	public MessageThreadRepositoryInMemory messageBoard() {
+		final MessageThreadRepositoryInMemory messageBoard = new MessageThreadRepositoryInMemory();
 		
 		messageBoard.startThread()
 			.addPost(new Post("Getting in Contact", "Majorlabelland", new Date()))

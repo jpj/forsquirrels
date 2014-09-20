@@ -50,5 +50,6 @@
 	</build>
 	<modules>
 	 <module>forsquirrels-messageboard-api</module>
-	</modules>
+    <module>forsquirrels-messageboard-display-webapp</module>
+  </modules>
 </project>

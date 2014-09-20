@@ -9,11 +9,11 @@ import org.junit.Test;
 
 public class MessageBoardTest {
 	
-	private MessageBoard target;
+	private MessageThreadRepositoryInMemory target;
 	
 	@Before
 	public void setup_before_each_test() {
-		this.target = new MessageBoard();
+		this.target = new MessageThreadRepositoryInMemory();
 	}
 	
 	@Test
