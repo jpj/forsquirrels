@@ -22,18 +22,18 @@ public class PostTest {
 
 	@Test
 	public void post_has_subject() {
-		assertThat(this.target.subject(), is(SUBJECT));
+		assertThat(this.target.getSubject(), is(SUBJECT));
 	}
 	
 	@Test
 	public void post_has_author() {
-		String author = this.target.author();
+		String author = this.target.getAuthor();
 		assertThat(author, is(AUTHOR));
 	}
 	
 	@Test
 	public void post_has_post_date() {
-		Date postDate = this.target.postDate();
+		Date postDate = this.target.getPostDate();
 		assertThat(postDate, is(POST_DATE));
 	}
 }

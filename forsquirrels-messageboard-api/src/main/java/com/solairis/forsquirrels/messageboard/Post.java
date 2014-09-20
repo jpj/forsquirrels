@@ -15,15 +15,15 @@ public class Post {
 		this.postDate = postDate;
 	}
 	
-	public String subject() {
+	public String getSubject() {
 		return this.subject;
 	}
 
-	public String author() {
+	public String getAuthor() {
 		return this.author;
 	}
 
-	public Date postDate() {
+	public Date getPostDate() {
 		return this.postDate;
 	}
 
