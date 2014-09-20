@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Temporal;
 
 @Entity(name = "FS_MB_THREADS")
-public class MsgBoardThread implements Serializable {
+public class MsgThread implements Serializable {
 	
 	@Id
 	@GeneratedValue
