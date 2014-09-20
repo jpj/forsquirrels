@@ -18,8 +18,8 @@ public class MessageBoardTest {
 	
 	@Test
 	public void show_list_of_posts() {
-		List<Post> posts = this.target.findAllThreads();
-		assertThat(posts.isEmpty(), is(false));
+		List<MessageThread> threads = this.target.findAllThreads();
+		assertThat(threads.isEmpty(), is(true));
 	}
 
 }
