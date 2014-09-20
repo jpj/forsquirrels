@@ -1,5 +1,7 @@
 insert into FS_MB_THREADS(DATE) values (NOW)
 
+insert into FS_MB_POSTS(PARENT, DATE, NAME, SUBJECT, BODY, LISTEN) values (1, NOW, 'Bob', 'First Subject', 'And in first thread', 'Not listening to anything')
+
 /*
 --
 -- Sample dataset containing a number of Hotels in various Cities across the world.  The reviews are entirely fictional :)

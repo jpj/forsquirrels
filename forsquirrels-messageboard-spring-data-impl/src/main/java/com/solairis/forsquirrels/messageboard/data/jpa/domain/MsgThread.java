@@ -23,4 +23,20 @@ public class MsgThread implements Serializable {
 	@Temporal(javax.persistence.TemporalType.DATE)
 	private Date creationDate;
 
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Date getCreationDate() {
+		return creationDate;
+	}
+
+	public void setCreationDate(Date creationDate) {
+		this.creationDate = creationDate;
+	}
+
 }
